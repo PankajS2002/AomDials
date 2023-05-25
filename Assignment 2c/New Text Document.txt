@@ -1,0 +1,63 @@
+(install nodejs)
+
+npm --version
+
+npm install -g @angular/cli@latest
+
+ng new my-project
+
+cd my-project
+
+
+delete everything from app.component.html and paste
+<h1>{{title}}</h1>
+
+<input type="text" #name placeholder="enetr your name" name="Name"> <br>
+<input type="text" #address placeholder="enetr your address" name="Address"> <br>
+<input type="text" #contact placeholder="enetr your cnotact number" name="Contact"> <br>
+<input type="email" #email placeholder="enetr your email" name="Email"> <br>
+<input type="password" #password placeholder="enetr your password" name="Password"> <br>
+
+<button (click)="getValue(name.value,address.value,contact.value,email.value)"> Register </button>
+
+<h1>Your Registerd Data is as follows </h1>
+
+<p>Name:{{displayname}}</p>
+<p>Address:{{displayaddress}}</p>
+<p>Contact:{{displaycontact}}</p>
+<p>Email:{{displayemail}}</p>
+
+
+
+also from app.component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Registration Form';
+
+  displayname="";
+  displayaddress="";
+  displaycontact="";
+  displayemail="";
+
+  getValue(name:string, address:string, contact:string, email:string){
+    this.displayname=name;
+    this.displayaddress=address;
+    this.displaycontact=contact;
+    this.displayemail=email;
+    
+  }
+}
+
+
+
+
+(after writing program save and run)
+
+ng serve

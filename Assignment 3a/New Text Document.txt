@@ -1,0 +1,40 @@
+npm init
+
+npm i express
+
+node app.js
+
+app.js
+const express = require("express")
+const app = express()
+const path = require('path');
+
+
+const path1 = path.join(__dirname,"");
+app.use(express.static(path1));
+
+app.get("/",(req,res)=>{
+    res.send("hello world");
+})
+
+app.listen(8000,()=>{
+    console.log("listening on port 8000")
+})
+
+
+
+
+
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome to the website</h1>
+</body>
+</html>

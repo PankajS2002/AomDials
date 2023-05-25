@@ -1,0 +1,39 @@
+include cdn from jquery mobile -> download-> scroll and copy and paste 3 links 
+
+setting pages:-
+body
+  div data-role="page"
+     -------------"header"
+     -------------"main"
+     -------------"footer"
+  div
+
+
+navigate:-
+  to navigate create a new div data-role="page" and give id to it 
+  and use this id in <a href="#thatid" >nav</a>  to navigate
+
+
+data-position="fixed" to fix that section to bottom
+
+ 
+data-theme="b" sets theme to black
+
+button:-
+<a href="#" class="ui-btn ui-btn-inline ui-btn-mini">
+
+<a href="#" class="ui-btn ui-icon-shop ui-btn-icon-left">
+
+<center></center> to center elements
+
+
+listview:-
+
+<ul data-role="listview" data-filter="true">
+  <li>
+  <li>
+</ul>
+
+
+
+data-transition="slide"

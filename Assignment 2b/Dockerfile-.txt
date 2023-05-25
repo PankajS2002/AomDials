@@ -1,0 +1,17 @@
+Dockerfile- 
+FROM node:alpine
+COPY . /partb
+CMD node /partb/ashish.js
+
+ashish.js-
+console.log("Name:Ashish Mundhe");
+console.log("Class:TE");
+console.log("Branch: IT");
+console.log("Roll number: TI11");
+
+
+1) docker --version
+2) node ashish.js
+3) docker build -t partb .
+4) docker images
+5)docker run image-id
