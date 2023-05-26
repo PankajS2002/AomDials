@@ -15,3 +15,19 @@ console.log("Roll number: TI11");
 3) docker build -t partb .
 4) docker images
 5)docker run image-id
+
+
+
+app.yml
+runtime: python27
+
+api version: 1
+
+threadsafe: false
+
+
+handlers:
+
+- url: /
+
+  script: test.app
